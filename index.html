@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form action="/action_page.php">
+
+    <div class="row">
+      <div class="col-sm-4 name">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control name" placeholder="Enter email" value="name" name="email">
+        </div>
+      </div>
+       <div class="col-sm-4">
+        <div class="form-group">
+          <input type="radio" class="radio1" name="12" value="1">show
+          <input type="radio" class="radio1" name="12" value="0">hide
+        </div>
+      </div>
+    </div>
+
+        <div class="row">
+      <div class="col-sm-4 name">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control name" placeholder="Enter email" value="name" name="email">
+        </div>
+      </div>
+       <div class="col-sm-4">
+        <div class="form-group">
+          <input type="radio" class="radio1" name="122" value="1">show
+          <input type="radio" class="radio1" name="122" value="0">hide
+        </div>
+      </div>
+    </div>
+
+        <div class="row">
+      <div class="col-sm-4 name">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control name" placeholder="Enter email" value="name" name="email">
+        </div>
+      </div>
+       <div class="col-sm-4">
+        <div class="form-group">
+          <input type="radio" class="radio1" name="123" value="1">show
+          <input type="radio" class="radio1" name="123" value="0">hide
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $(".radio1").change(function(e){
+    e.preventDefault();
+    if($(this).val() == 0){
+        $(this).closest('div.col-sm-4').parent().find('.name input').attr('disabled',true).val('');
+    }else{
+      $(this).closest('div.col-sm-4').parent().find('.name input').attr('disabled',false).val('name');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
